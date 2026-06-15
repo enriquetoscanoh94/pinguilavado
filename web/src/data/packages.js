@@ -8,23 +8,23 @@ export const TIER = Object.freeze({
 export const packages = [
   {
     id: TIER.SILVER,
-    name:    { en: 'Silver Mini Full Detail',     es: 'Silver Mini Detallado' },
+    name:    { en: 'Standar Wash',     es: 'Lavado Estandar' },
     accent:  '#9ca3af',
     ribbon:  null,
     description: {
       en: [
-        'Interior detailed: cup holders, dashboard, windows',
-        'Vacuum all carpets and seats',
-        'Detailed hand wash, tires & wheels',
-        'All cracks and crevices cleaned',
-        'Shampoo for carpet and seats (light dirt only)'
+        'Hand wash, wheels, tires',
+        'Vacuum inside / cup holders, windows',
+        'Wipe down',
+        'Tire dressing',
+        'Interior fragrance'
       ],
       es: [
-        'Detallado interior: portavasos, tablero, ventanas',
-        'Aspirado de alfombras y asientos',
-        'Lavado a mano detallado, llantas y rines',
-        'Limpieza de grietas y hendiduras',
-        'Shampoo de alfombra y asientos (autos no muy sucios)'
+        'Lavado a mano, rines y llantas',
+        'Aspirado interior / portavasos, ventanas',
+        'Limpieza con pano (wipe down)',
+        'Brillo en llantas',
+        'Aromatizante interior'
       ]
     },
     prices: {
