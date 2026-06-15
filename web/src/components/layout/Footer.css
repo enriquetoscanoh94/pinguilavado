@@ -1,0 +1,110 @@
+.footer {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  margin-top: var(--space-8);
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  padding-block: var(--space-7);
+  align-items: start;
+}
+
+.footer__brand {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+.footer__brand img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--surface);
+  padding: 4px;
+  object-fit: contain;
+}
+.footer__brand strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.footer__brand span {
+  font-size: var(--fs-xs);
+  color: var(--text-soft);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: var(--space-2) var(--space-6);
+}
+.footer__links a {
+  font-size: var(--fs-sm);
+  color: var(--text-soft);
+  font-weight: 600;
+  transition: color var(--motion-fast) var(--ease);
+  padding: var(--space-1) 0;
+}
+.footer__links a:hover { color: var(--red); }
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.footer__contact a {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  transition: color var(--motion-fast) var(--ease);
+}
+.footer__contact a:hover { color: var(--red); }
+.footer__contact span {
+  font-size: var(--fs-sm);
+  color: var(--text-soft);
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--border);
+  padding-block: var(--space-4);
+  font-size: var(--fs-xs);
+  color: var(--text-dim);
+}
+.footer__bottomInner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.footer__built {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.footer__built::before {
+  content: '';
+  inline-size: 8px;
+  block-size: 8px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 10px var(--red);
+}
+
+@media (min-width: 768px) {
+  .footer__top {
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: var(--space-7);
+    padding-block: var(--space-8);
+  }
+}

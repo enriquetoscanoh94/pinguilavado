@@ -1,0 +1,121 @@
+/* === Design Tokens ===
+ * Single source of truth for colors, spacing, radii, motion, typography.
+ * Mobile-first: defaults target the smallest screen.
+ */
+:root {
+  /* Brand */
+  --red: #e10600;
+  --red-light: #ff2a1f;
+  --red-dark: #a30000;
+  --blue: #0046ff;
+  --blue-light: #2e6bff;
+  --blue-dark: #002db5;
+
+  /* Spacing (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Typography */
+  --font-display: 'Anton', 'Bebas Neue', 'Impact', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: clamp(1.85rem, 5vw, 2.5rem);
+  --fs-4xl: clamp(2.2rem, 7vw, 3.5rem);
+  --fs-5xl: clamp(2.6rem, 10vw, 5rem);
+
+  /* Motion */
+  --motion-fast: 0.18s;
+  --motion-base: 0.28s;
+  --motion-slow: 0.5s;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-px: var(--space-4);
+  --header-h: 64px;
+
+  /* Z-index scale */
+  --z-base: 1;
+  --z-nav: 100;
+  --z-dialog: 200;
+  --z-toast: 300;
+
+  /* Shadows (theme-independent) */
+  --shadow-red: 0 14px 40px rgba(225,6,0,0.35);
+  --shadow-blue: 0 14px 40px rgba(0,70,255,0.30);
+
+  /* Focus ring */
+  --ring: var(--blue-light);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --container-px: var(--space-5);
+    --header-h: 76px;
+  }
+}
+
+/* Dark theme (default) */
+[data-theme="dark"] {
+  --bg: #07080c;
+  --bg-soft: #0f1118;
+  --bg-elev: #151823;
+  --bg-card: #161a25;
+  --surface: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.16);
+  --text: #f3f4f8;
+  --text-soft: #a8acba;
+  --text-dim: #6c7080;
+  --header-bg: rgba(7,8,12,0.72);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.12);
+  --shadow: 0 8px 24px rgba(0,0,0,0.25);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.45);
+  --grad-hero:
+    radial-gradient(1200px 600px at 20% -10%, rgba(225,6,0,0.20), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(0,70,255,0.20), transparent 60%);
+  --grad-section: linear-gradient(180deg, #07080c 0%, #0c0e16 100%);
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --bg: #f6f7fb;
+  --bg-soft: #ffffff;
+  --bg-elev: #ffffff;
+  --bg-card: #ffffff;
+  --surface: rgba(0,0,0,0.03);
+  --border: rgba(0,0,0,0.08);
+  --border-strong: rgba(0,0,0,0.16);
+  --text: #0b0d14;
+  --text-soft: #4a4f5e;
+  --text-dim: #7a7f8c;
+  --header-bg: rgba(255,255,255,0.78);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow: 0 8px 24px rgba(0,0,0,0.10);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.18);
+  --grad-hero:
+    radial-gradient(1200px 600px at 20% -10%, rgba(225,6,0,0.10), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(0,70,255,0.10), transparent 60%);
+  --grad-section: linear-gradient(180deg, #ffffff 0%, #f1f3f9 100%);
+}
