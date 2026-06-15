@@ -12,7 +12,7 @@ export function Footer() {
     <footer className="footer">
       <Container className="footer__top">
         <div className="footer__brand">
-          <img src="/assets/logo.webp" alt="" width="56" height="56" />
+          <img src={`${import.meta.env.BASE_URL}assets/logo.webp`} alt="" width="56" height="56" />
           <div>
             <strong>{business.shortName.toUpperCase()}</strong>
             <span>{t.footer.tagline}</span>

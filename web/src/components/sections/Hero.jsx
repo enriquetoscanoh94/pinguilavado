@@ -19,10 +19,10 @@ export function Hero() {
         loop
         playsInline
         preload="metadata"
-        poster="/assets/img7.webp"
+        poster={`${import.meta.env.BASE_URL}assets/img7.webp`}
         aria-hidden="true"
       >
-        <source src="/assets/vid.mp4" type="video/mp4" />
+        <source src={`${import.meta.env.BASE_URL}assets/vid.mp4`} type="video/mp4" />
       </video>
       <div className="hero__overlay" aria-hidden="true" />
       <div className="hero__glow" aria-hidden="true" />
@@ -62,7 +62,7 @@ export function Hero() {
 
         <Reveal delay={220} className="hero__right">
           <div className="hero__logoWrap">
-            <img src="/assets/logo.webp" alt="" width="460" height="460" />
+            <img src={`${import.meta.env.BASE_URL}assets/logo.webp`} alt="" width="460" height="460" />
           </div>
           <span className="hero__star hero__star--tl" aria-hidden="true" />
           <span className="hero__star hero__star--br" aria-hidden="true" />

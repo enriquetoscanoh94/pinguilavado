@@ -29,7 +29,7 @@ export function Navbar() {
     <header className={cn('nav', scrolled && 'nav--scrolled')}>
       <Container className="nav__inner">
         <a href="#home" className="nav__brand" onClick={close} aria-label="The Penguin Auto Detailing">
-          <img src="/assets/logo.webp" alt="" width="46" height="46" />
+          <img src={`${import.meta.env.BASE_URL}assets/logo.webp`} alt="" width="46" height="46" />
           <span className="nav__brandText">
             <strong>THE PENGUIN</strong>
             <em>Auto Mobile Detailing</em>

@@ -16,8 +16,8 @@ export function About() {
     <Section id="about" variant="soft" className="about">
       <Container className="about__grid">
         <Reveal className="about__media">
-          <video autoPlay muted loop playsInline preload="metadata" poster="/assets/img4.webp" aria-hidden="true">
-            <source src="/assets/vid1.mp4" type="video/mp4" />
+          <video autoPlay muted loop playsInline preload="metadata" poster={`${import.meta.env.BASE_URL}assets/img4.webp`} aria-hidden="true">
+            <source src={`${import.meta.env.BASE_URL}assets/vid1.mp4`} type="video/mp4" />
           </video>
           <div className="about__sticker" aria-hidden="true">
             <strong>{business.yearsExperience}+</strong>

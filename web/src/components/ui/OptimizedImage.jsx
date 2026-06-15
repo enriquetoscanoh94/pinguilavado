@@ -1,5 +1,6 @@
 export function OptimizedImage({ src, alt = '', width, height, loading = 'lazy', decoding = 'async', className }) {
-  const base = src.replace(/\.(webp|jpeg|jpg|png)$/i, '');
+  const normalized = src.startsWith('/') ? `${import.meta.env.BASE_URL}${src.slice(1)}` : src;
+  const base = normalized.replace(/\.(webp|jpeg|jpg|png)$/i, '');
   const avif = `${base}.avif`;
   const webp = `${base}.webp`;
   const fallback = `${base}.jpeg`;
