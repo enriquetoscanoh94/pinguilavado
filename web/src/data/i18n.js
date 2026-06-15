@@ -25,6 +25,7 @@ export const translations = {
       priceQuote: 'Price varies',
       priceQuoteShort: 'Quote',
       priceQuoteNote: 'per vehicle',
+      dirtyNote: 'Price varies for extremely dirty vehicles.',
       ribbon: { popular: 'Most Popular', premium: 'Premium' },
       smsTemplate: (pkg) => `Hi! I want to book the ${pkg}.`
     },
@@ -101,6 +102,7 @@ export const translations = {
       priceQuote: 'Precio variable',
       priceQuoteShort: 'Cotizar',
       priceQuoteNote: 'segun auto',
+      dirtyNote: 'El precio puede variar para vehiculos extremadamente sucios.',
       ribbon: { popular: 'Mas Popular', premium: 'Premium' },
       smsTemplate: (pkg) => `Hola! Quiero agendar el ${pkg}.`
     },

@@ -50,6 +50,11 @@ export function Services() {
           </div>
         </Reveal>
 
+        <Reveal delay={60} as="p" className="services__note">
+          <Icon name="check" size={14} strokeWidth={3} />
+          <span>{t.services.dirtyNote}</span>
+        </Reveal>
+
         <div className="services__grid">
           {packages.map((p, idx) => {
             const price = p.prices ? p.prices[vehicle] : null;
