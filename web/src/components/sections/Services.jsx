@@ -14,7 +14,8 @@ const PKG_ICON = {
   [TIER.SILVER]:   'pkgSilver',
   [TIER.GOLDEN]:   'pkgGolden',
   [TIER.PLATINUM]: 'pkgPlatinum',
-  [TIER.DIAMOND]:  'pkgDiamond'
+  [TIER.DIAMOND]:  'pkgDiamond',
+  [TIER.EXTRAS]:   'pkgPlatinum'
 };
 
 export function Services() {
@@ -51,10 +52,11 @@ export function Services() {
 
         <div className="services__grid">
           {packages.map((p, idx) => {
-            const price = p.prices[vehicle];
+            const price = p.prices ? p.prices[vehicle] : null;
             const name  = pick(p.name);
             const desc  = pick(p.description);
             const isPremium = p.id === TIER.PLATINUM || p.id === TIER.DIAMOND;
+            const isExtras  = p.id === TIER.EXTRAS;
             return (
               <Reveal key={p.id} delay={80 * (idx + 1)} as="article" className={cn('pkg', `pkg--${p.id}`)}>
                 {p.ribbon && (
@@ -71,9 +73,19 @@ export function Services() {
                 </div>
 
                 <div className="pkg__price">
-                  <span className="pkg__priceFrom">{t.services.priceFrom}</span>
-                  <span className="pkg__priceVal"><small>$</small>{price.price}</span>
-                  <span className="pkg__priceTime">{price.time} {t.services.duration}</span>
+                  {price ? (
+                    <>
+                      <span className="pkg__priceFrom">{t.services.priceFrom}</span>
+                      <span className="pkg__priceVal"><small>$</small>{price.price}</span>
+                      <span className="pkg__priceTime">{price.time} {t.services.duration}</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="pkg__priceFrom">{t.services.priceQuote}</span>
+                      <span className="pkg__priceVal pkg__priceVal--quote">{t.services.priceQuoteShort}</span>
+                      <span className="pkg__priceTime">{t.services.priceQuoteNote}</span>
+                    </>
+                  )}
                 </div>
 
                 <ul className="pkg__list">
@@ -90,7 +102,7 @@ export function Services() {
                   href={waHref(t.services.smsTemplate(name))}
                   target="_blank"
                   rel="noopener noreferrer"
-                  variant={isPremium ? 'blue' : 'red'}
+                  variant={isExtras ? 'blue' : isPremium ? 'blue' : 'red'}
                   className="pkg__cta"
                   iconLeft={<Icon name="whatsapp" size={16} />}
                 >

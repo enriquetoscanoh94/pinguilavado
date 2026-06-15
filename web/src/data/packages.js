@@ -2,7 +2,8 @@ export const TIER = Object.freeze({
   SILVER:   'silver',
   GOLDEN:   'golden',
   PLATINUM: 'platinum',
-  DIAMOND:  'diamond'
+  DIAMOND:  'diamond',
+  EXTRAS:   'extras'
 });
 
 export const packages = [
@@ -153,6 +154,29 @@ export const packages = [
       midSuv: { price: 355, time: 225 },
       truck:  { price: 395, time: 275 }
     }
+  },
+  {
+    id: TIER.EXTRAS,
+    name:    { en: 'Extras Services', es: 'Servicios Extras' },
+    accent:  '#c084fc',
+    ribbon:  null,
+    description: {
+      en: [
+        'Pet hair remover',
+        'Water spot remover',
+        'Single seats shampoo',
+        'Wax',
+        'Headlights restoration'
+      ],
+      es: [
+        'Removedor de pelo de mascotas',
+        'Removedor de manchas de agua',
+        'Shampoo de asientos individuales',
+        'Cera',
+        'Restauracion de faros'
+      ]
+    },
+    prices: null
   }
 ];
 

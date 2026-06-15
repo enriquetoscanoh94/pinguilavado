@@ -22,6 +22,9 @@ export const translations = {
       priceFrom: 'From',
       duration: 'min',
       bookBtn: 'Book this package',
+      priceQuote: 'Price varies',
+      priceQuoteShort: 'Quote',
+      priceQuoteNote: 'per vehicle',
       ribbon: { popular: 'Most Popular', premium: 'Premium' },
       smsTemplate: (pkg) => `Hi! I want to book the ${pkg}.`
     },
@@ -95,6 +98,9 @@ export const translations = {
       priceFrom: 'Desde',
       duration: 'min',
       bookBtn: 'Agendar paquete',
+      priceQuote: 'Precio variable',
+      priceQuoteShort: 'Cotizar',
+      priceQuoteNote: 'segun auto',
       ribbon: { popular: 'Mas Popular', premium: 'Premium' },
       smsTemplate: (pkg) => `Hola! Quiero agendar el ${pkg}.`
     },

@@ -88,6 +88,12 @@
 .pkg--golden   { color: #f59e0b; }
 .pkg--platinum { color: #a855f7; }
 .pkg--diamond  { color: #06b6d4; }
+.pkg--extras   { color: #c084fc; }
+
+.pkg__priceVal--quote {
+  font-size: 1.6rem !important;
+  letter-spacing: 0.5px;
+}
 
 .pkg__ribbon {
   position: absolute;
