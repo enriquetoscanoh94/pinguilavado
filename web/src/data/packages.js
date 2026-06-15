@@ -29,9 +29,9 @@ export const packages = [
       ]
     },
     prices: {
-      sedan:  { price: 70,  time: 60  },
-      midSuv: { price: 85,  time: 85  },
-      truck:  { price: 100, time: 115 }
+      sedan:  { price: 85,  time: 90  },
+      midSuv: { price: 95,  time: 110 },
+      truck:  { price: 120, time: 140 }
     }
   },
   {
