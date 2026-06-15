@@ -12,7 +12,7 @@ export const business = {
   socials: {
     facebook: 'https://www.facebook.com/profile.php?id=61574151563673',
     tiktok:   'https://www.tiktok.com/@thepenguinautodetailing',
-    maps:     'https://www.google.com/maps/place/The+Penguin+Auto+Mobile+Detailing'
+    maps:     'https://www.google.com/maps/place/The+Penguin+Auto+Mobile+Detailing/@34.0476639,-83.967322,9z/data=!3m1!4b1!4m6!3m5!1s0xa913f5a356d5291f:0x32c5b3c1ee5dcc7f!8m2!3d34.0476639!4d-83.967322!16s%2Fg%2F11x1p5z0d5'
   }
 };
 
